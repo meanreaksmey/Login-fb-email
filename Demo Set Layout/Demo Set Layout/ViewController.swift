@@ -7,19 +7,31 @@
 //
 
 import UIKit
+import FontAwesomeKit
+import Google
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var btnFacebook: UIButton!
+    @IBOutlet weak var btnEmail: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        FontButton()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-
-
+    func FontButton(){
+        
+        btnFacebook.setImage(UIImage(named: "facebook")?.withRenderingMode(.alwaysOriginal), for: .normal)
+        btnEmail.setImage(UIImage(named: "google")?.withRenderingMode(.alwaysOriginal), for: .normal)
+        
+        
+    }
+    
+    
+    
+    
 }
 
